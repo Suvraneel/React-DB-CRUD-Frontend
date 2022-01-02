@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Skeleton,
   Grid,
   Box,
   Typography,
@@ -80,6 +81,29 @@ const PostMessages = ({ classes, ...props }) => {
 
         <Grid item xs={6}>
           <Paper>
+            {props.postMessageList[0] == null ? 
+            <>
+            <br />
+            <Skeleton animation="wave" variant="text" />
+            <Skeleton animation="wave" variant="circular" width={60} height={60} />
+            <br />
+            <Skeleton animation="wave" variant="rectangular" height={80} />
+            <br />
+            <Skeleton animation="wave" variant="text" />
+            <Skeleton animation="wave" variant="circular" width={60} height={60} />
+            <br />
+            <Skeleton animation="wave" variant="rectangular" height={80} />
+            <br />
+            <Skeleton animation="wave" variant="text" />
+            <Skeleton animation="wave" variant="circular" width={60} height={60} />
+            <br />
+            <Skeleton animation="wave" variant="rectangular" height={80} />
+            <br />
+            <Skeleton animation="wave" variant="text" />
+            <Skeleton animation="wave" variant="circular" width={60} height={60} />
+            <br />
+            <Skeleton animation="wave" variant="rectangular" height={80} />
+            </> : 
             <List>
               {props.postMessageList.map((record, index) => {
                 return (
@@ -120,7 +144,7 @@ const PostMessages = ({ classes, ...props }) => {
                   </Fragment>
                 );
               })}
-            </List>
+            </List>}
           </Paper>
         </Grid>
       </Grid>
