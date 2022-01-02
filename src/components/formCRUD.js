@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import {
-  Box,
   TextField,
-  Paper,
   Card,
   CardContent,
   Button,
   ThemeProvider,
 } from "@mui/material";
-import useForm from "./useForm";
+import useForm from "./handleFormChanges";
 import { connect } from "react-redux";
 import * as actions from "../actions/postMessage";
 import { createTheme } from "@mui/material/styles";
@@ -67,7 +65,6 @@ const PostMessageForm = ({ classes, ...props }) => {
     let temp = { ...errors };
     temp.title = values.title ? "" : "* Required field";
     temp.artist = values.artist ? "" : "* Required field";
-    temp.metadata = values.metadata ? "" : "* Required field";
     setErrors({
       ...temp,
     });

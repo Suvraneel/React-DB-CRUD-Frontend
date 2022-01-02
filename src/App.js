@@ -2,7 +2,7 @@ import "./App.css";
 import SiteLayout from "./components/SiteLayout";
 import { Provider } from "react-redux";
 import { store } from "./actions/store";
-import { Container, AppBar, Typography, ThemeProvider } from "@mui/material";
+import { Container, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 
 // Theme Design by Suvraneel:
