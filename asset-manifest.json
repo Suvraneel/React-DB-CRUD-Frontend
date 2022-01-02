@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-db-crud-frontend/static/css/main.2a8233a3.css",
+    "main.js": "/react-db-crud-frontend/static/js/main.c57e0a25.js",
+    "static/js/787.262d6594.chunk.js": "/react-db-crud-frontend/static/js/787.262d6594.chunk.js",
+    "static/media/skull.gif": "/react-db-crud-frontend/static/media/skull.d1083bf307a50169c4e0.gif",
+    "index.html": "/react-db-crud-frontend/index.html",
+    "main.2a8233a3.css.map": "/react-db-crud-frontend/static/css/main.2a8233a3.css.map",
+    "main.c57e0a25.js.map": "/react-db-crud-frontend/static/js/main.c57e0a25.js.map",
+    "787.262d6594.chunk.js.map": "/react-db-crud-frontend/static/js/787.262d6594.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a8233a3.css",
+    "static/js/main.c57e0a25.js"
+  ]
+}
