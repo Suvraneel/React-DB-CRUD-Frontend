@@ -81,70 +81,86 @@ const PostMessages = ({ classes, ...props }) => {
 
         <Grid item xs={6}>
           <Paper>
-            {props.postMessageList[0] == null ? 
-            <>
-            <br />
-            <Skeleton animation="wave" variant="text" />
-            <Skeleton animation="wave" variant="circular" width={60} height={60} />
-            <br />
-            <Skeleton animation="wave" variant="rectangular" height={80} />
-            <br />
-            <Skeleton animation="wave" variant="text" />
-            <Skeleton animation="wave" variant="circular" width={60} height={60} />
-            <br />
-            <Skeleton animation="wave" variant="rectangular" height={80} />
-            <br />
-            <Skeleton animation="wave" variant="text" />
-            <Skeleton animation="wave" variant="circular" width={60} height={60} />
-            <br />
-            <Skeleton animation="wave" variant="rectangular" height={80} />
-            <br />
-            <Skeleton animation="wave" variant="text" />
-            <Skeleton animation="wave" variant="circular" width={60} height={60} />
-            <br />
-            <Skeleton animation="wave" variant="rectangular" height={80} />
-            </> : 
-            <List>
-              {props.postMessageList.map((record, index) => {
-                return (
-                  <Fragment key={index}>
-                    <ListItem>
-                      <ListItemText>
-                        <Grid
-                          container
-                          direction="row"
-                          justifyContent="space-between"
-                        >
-                          <Box sx={{ "& > :not(style)": { m: 1 } }}>
-                            <Typography variant="h5">{record.title}</Typography>
-                            <Typography>{record.artist}</Typography>
-                            <Typography>{record.metadata}</Typography>
-                          </Box>
-                          <Box sx={{ "& > :not(style)": { m: 1 } }}>
-                            <Fab
-                              color="secondary"
-                              aria-label="edit"
-                              onClick={() => setCurrentId(record._id)}
-                            >
-                              <EditIcon />
-                            </Fab>
-                            <Fab
-                              color="common.red"
-                              aria-label="delete"
-                              onClick={() => onDelete(record._id)}
-                              variant="circular"
-                            >
-                              <DeleteIcon />
-                            </Fab>
-                          </Box>
-                        </Grid>
-                      </ListItemText>
-                    </ListItem>
-                    <Divider component="li" />
-                  </Fragment>
-                );
-              })}
-            </List>}
+            {props.postMessageList[0] == null ? (
+              <Box sx={{ "& > :not(style)": { m: 1 } }}>
+                <Skeleton animation="wave" variant="text" />
+                <Skeleton
+                  animation="wave"
+                  variant="circular"
+                  width={60}
+                  height={60}
+                />
+                <Skeleton animation="wave" variant="rectangular" height={50} />
+                <Skeleton animation="wave" variant="text" />
+                <Skeleton
+                  animation="wave"
+                  variant="circular"
+                  width={60}
+                  height={60}
+                />
+                <Skeleton animation="wave" variant="rectangular" height={50} />
+                <Skeleton animation="wave" variant="text" />
+                <Skeleton
+                  animation="wave"
+                  variant="circular"
+                  width={60}
+                  height={60}
+                />
+                <Skeleton animation="wave" variant="rectangular" height={50} />
+                <Skeleton animation="wave" variant="text" />
+                <Skeleton
+                  animation="wave"
+                  variant="circular"
+                  width={60}
+                  height={60}
+                />
+                <Skeleton animation="wave" variant="rectangular" height={50} />
+              </Box>
+            ) : (
+              <List>
+                {props.postMessageList.map((record, index) => {
+                  return (
+                    <Fragment key={index}>
+                      <ListItem>
+                        <ListItemText>
+                          <Grid
+                            container
+                            direction="row"
+                            justifyContent="space-between"
+                          >
+                            <Box sx={{ "& > :not(style)": { m: 1 } }}>
+                              <Typography variant="h5">
+                                {record.title}
+                              </Typography>
+                              <Typography>{record.artist}</Typography>
+                              <Typography>{record.metadata}</Typography>
+                            </Box>
+                            <Box sx={{ "& > :not(style)": { m: 1 } }}>
+                              <Fab
+                                color="secondary"
+                                aria-label="edit"
+                                onClick={() => setCurrentId(record._id)}
+                              >
+                                <EditIcon />
+                              </Fab>
+                              <Fab
+                                color="common.red"
+                                aria-label="delete"
+                                onClick={() => onDelete(record._id)}
+                                variant="circular"
+                              >
+                                <DeleteIcon />
+                              </Fab>
+                            </Box>
+                          </Grid>
+                        </ListItemText>
+                      </ListItem>
+                      <Divider component="li" />
+                    </Fragment>
+                  );
+                })}
+              </List>
+            )}
           </Paper>
         </Grid>
       </Grid>
